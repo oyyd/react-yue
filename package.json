@@ -1,0 +1,63 @@
+{
+  "name": "react-yue",
+  "version": "1.0.0",
+  "description": "Render the view of GUI apps with yue and react.",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "dev": "babel src --out-dir lib -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "oyyd <oyydoibh@gmail.com>",
+  "dependencies": {
+    "gui": "^0.2.1",
+    "react": "^16.2.0",
+    "react-reconciler": "^0.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.35",
+    "@babel/core": "^7.0.0-beta.35",
+    "@babel/preset-env": "^7.0.0-beta.35",
+    "@babel/preset-react": "^7.0.0-beta.35",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "jest": "^22.0.3",
+    "react": "^16.2.0"
+  },
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "7"
+          }
+        }
+      ],
+      "@babel/preset-react"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "jest": true
+    },
+    "extends": "airbnb",
+    "rules": {
+      "semi": [
+        2,
+        "never"
+      ],
+      "arrow-parens": 0,
+      "global-require": 0,
+      "no-underscore-dangle": 0,
+      "no-param-reassign": 0,
+      "import/prefer-default-export": 0,
+      "react/jsx-filename-extension": 0
+    }
+  }
+}
