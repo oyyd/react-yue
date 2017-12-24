@@ -22,6 +22,7 @@ class MyComp extends React.Component {
       <container>
         <button
           title="MyComp"
+          onClick={() => console.log('ENTER')}
         />
       </container>
     )
@@ -41,12 +42,12 @@ const ele = (
       }}
       onClick={() => console.log('hello')}
     />
-    {['a', 'b', 'c'].map(i => (
+    {/* {['a', 'b', 'c'].map(i => (
       <button
         key={i}
         title={i}
       />
-    ))}
+    ))} */}
   </container>
 )
 
@@ -77,15 +78,14 @@ setTimeout(() => {
         style={{
           color: '#DDDDDD',
         }}
-        onClick={() => console.log('hello')}
       />
-      {['e', 'b', 'c'].map(i => (
+      <MyComp />
+      {/* {['e', 'b', 'c'].map(i => (
         <button
           key={i}
           title={i}
         />
-      ))}
-      <MyComp />
+      ))} */}
     </container>
   )
 

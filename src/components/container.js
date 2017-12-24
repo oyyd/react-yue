@@ -4,7 +4,14 @@ import Base from './base'
 export default class Wrapper extends Base {
   constructor(props) {
     super(Container.create())
+
+    this.update(null, props)
+  }
+
+  // TODO: use "lastProps" to avoid unnecessary updating
+  update(lastProps, props) {
     this.applyStyle(props.style)
+    this.updateSignal('onDraw', props.onDraw)
   }
 
   addChildView(child) {

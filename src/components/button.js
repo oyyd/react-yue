@@ -18,10 +18,6 @@ export default class Wrapper extends Base {
       this._ele.setTitle(props.title)
     }
 
-    if (typeof props.onClick === 'function') {
-      this._ele.onClick.connect(props.onClick)
-    } else {
-      this._ele.onClick.disconnectAll()
-    }
+    this.updateSignal('onClick', props.onClick)
   }
 }

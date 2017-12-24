@@ -9,8 +9,7 @@ function appendInitialChild(parentInstance, child) {
 
 function createInstance(type, props, internalInstanceHandle) {
   if (!hasComponent(type)) {
-    // throw new Error(`receive invalid type: ${type}`)
-    return {}
+    throw new Error(`receive invalid type: ${type}`)
   }
 
   const Comp = Components[type]
@@ -92,7 +91,9 @@ function insertBefore(parentInstance, child, beforeChild) {
   parentInstance.insertBefore(child, beforeChild)
 }
 
+// TODO: what's the "updatePayload"?
 function commitUpdate(instance, updatePayload, type, oldProps, newProps) {
+  // console.log('instance, updatePayload', instance, updatePayload, type, oldProps, newProps)
   instance.update(oldProps, newProps)
 }
 
