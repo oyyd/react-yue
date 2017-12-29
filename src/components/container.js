@@ -2,8 +2,8 @@ import { Container } from 'gui'
 import Base from './base'
 
 export default class Wrapper extends Base {
-  constructor(props) {
-    super(Container.create())
+  constructor(props, ele) {
+    super(ele || Container.create())
 
     this.update(null, props)
   }

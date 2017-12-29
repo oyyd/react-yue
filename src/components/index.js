@@ -4,6 +4,9 @@ import entry from './entry'
 import group from './group'
 import progressbar from './progress_bar'
 import scroll from './scroll'
+import label from './label'
+import textedit from './text_edit'
+import vibrant from './vibrant'
 
 export const Components = {
   button,
@@ -12,6 +15,9 @@ export const Components = {
   group,
   progressbar,
   scroll,
+  label,
+  textedit,
+  vibrant,
 }
 
 export function hasComponent(type) {

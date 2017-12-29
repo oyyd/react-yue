@@ -18,6 +18,10 @@ export default class Wrapper extends Base {
       this._ele.setTitle(props.title)
     }
 
+    if (props.image) {
+      this._ele.setImage(props.image)
+    }
+
     this.updateSignal('onClick', props.onClick)
   }
 }

@@ -6,6 +6,7 @@ const React = require('react')
 const gui = require('gui')
 const { render } = require('../index')
 
+// eslint-disable-next-line
 class MyComp extends React.Component {
   constructor(props) {
     super(props)
@@ -30,27 +31,31 @@ class MyComp extends React.Component {
 }
 
 const ele = (
-  <container
+  <vibrant
     style={{
       flexDirection: 'row',
       flex: 1,
     }}
   >
-    <scroll
+    <container
       style={{
-        flexDirection: 'row',
         flex: 1,
       }}
-      contentSize={{
-        width: 100,
-        height: 100,
+    >
+      <label
+        text="hello"
+      />
+    </container>
+    <container
+      style={{
+        flex: 1,
       }}
     >
-      <button
-        title="hello"
+      <label
+        text="hello2"
       />
-    </scroll>
-  </container>
+    </container>
+  </vibrant>
 )
 
 const win = gui.Window.create({})
