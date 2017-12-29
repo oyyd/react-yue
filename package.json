@@ -1,6 +1,6 @@
 {
   "name": "react-yue",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Render the view of GUI apps with yue and react.",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "oyyd <oyydoibh@gmail.com>",
+  "files": [
+    "lib",
+    "README.md"
+  ],
   "dependencies": {
     "gui": "^0.2.1",
     "react": "^16.2.0",
