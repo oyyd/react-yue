@@ -33,21 +33,23 @@ const ele = (
   <container
     style={{
       flexDirection: 'row',
+      flex: 1,
     }}
   >
-    <button
-      title="Hello"
+    <scroll
       style={{
-        color: '#DDDDDD',
+        flexDirection: 'row',
+        flex: 1,
       }}
-      onClick={() => console.log('hello')}
-    />
-    {/* {['a', 'b', 'c'].map(i => (
+      contentSize={{
+        width: 100,
+        height: 100,
+      }}
+    >
       <button
-        key={i}
-        title={i}
+        title="hello"
       />
-    ))} */}
+    </scroll>
   </container>
 )
 
@@ -66,33 +68,33 @@ render(ele, contentView, () => {
 win.center()
 win.activate()
 
-setTimeout(() => {
-  const ele2 = (
-    <container
-      style={{
-        flexDirection: 'row',
-      }}
-    >
-      <button
-        title="Hello2"
-        style={{
-          color: '#DDDDDD',
-        }}
-      />
-      <MyComp />
-      {/* {['e', 'b', 'c'].map(i => (
-        <button
-          key={i}
-          title={i}
-        />
-      ))} */}
-    </container>
-  )
-
-  render(ele2, contentView, () => {
-    console.log('__B')
-  })
-})
+// setTimeout(() => {
+//   const ele2 = (
+//     <container
+//       style={{
+//         flexDirection: 'row',
+//       }}
+//     >
+//       <button
+//         title="Hello2"
+//         style={{
+//           color: '#DDDDDD',
+//         }}
+//       />
+//       <entry />
+//       {['e', 'b', 'c'].map(i => (
+//         <button
+//           key={i}
+//           title={i}
+//         />
+//       ))}
+//     </container>
+//   )
+//
+//   render(ele2, contentView, () => {
+//     console.log('__B')
+//   })
+// })
 
 if (!process.versions.yode) {
   gui.lifetime.run()
