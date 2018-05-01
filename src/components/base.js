@@ -2,9 +2,9 @@
 // TODO: error boundaries
 import { emptyFunc } from '../utils'
 
-// function getListenerIdName(name) {
-//   return `__${name}SlotId`
-// }
+function getListenerIdName(name) {
+  return `__${name}SlotId`
+}
 
 export default class Base {
   constructor(_ele) {
@@ -22,18 +22,15 @@ export default class Base {
   }
 
   updateSignal(name, func) {
-    // TODO: Yue seems to disconnect all listeners in all instances
-    // TODO: There is no way to unbind a event currently.
-    if (typeof func === 'function') {
-      this._ele[name] = func
+    const idName = getListenerIdName(name)
+
+    if (typeof func === 'function' && !this[idName]) {
+      this[idName] = this._ele[name].connect(func)
     }
 
-    // const idName = getListenerIdName(name)
-    // if (typeof func === 'function') {
-    //   this[idName] = this._ele[name].connect(func)
-    // } else if (this[idName]) {
-    //   this._ele[name].disconnect(this[idName])
-    // }
+    if (typeof func !== 'function' && this[idName]) {
+      this._ele[name].disconnect(this[idName])
+    }
   }
 }
 
