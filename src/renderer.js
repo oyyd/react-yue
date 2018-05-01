@@ -27,16 +27,14 @@ function getPublicInstance(...args) {
   console.log('getPublicInstance')
 }
 
-function prepareForCommit() {
-}
+function prepareForCommit() {}
 
 function prepareUpdate() {
   // always update
   return true
 }
 
-function resetAfterCommit() {
-}
+function resetAfterCommit() {}
 
 function getRootHostContext() {
   return emptyObject
@@ -107,7 +105,9 @@ function commitTextUpdate(textInstance, oldText, newText) {
 
 export const YueRenderer = Reconciler({
   appendInitialChild,
+
   createInstance,
+
   createTextInstance,
 
   finalizeInitialChildren,

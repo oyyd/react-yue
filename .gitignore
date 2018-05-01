@@ -1,3 +1,5 @@
 node_modules
 WORK.md
 lib
+npm-debug.log
+research/**

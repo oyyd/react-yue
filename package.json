@@ -4,8 +4,10 @@
   "description": "Render the view of GUI apps with yue and react.",
   "main": "index.js",
   "scripts": {
+    "start": "node lib/do_space/index",
+    "dev": "node scripts/dev",
+    "build_lib": "babel src --out-dir lib -w",
     "build": "babel src --out-dir lib",
-    "dev": "babel src --out-dir lib -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "oyyd <oyydoibh@gmail.com>",
@@ -14,17 +16,21 @@
     "README.md"
   ],
   "dependencies": {
-    "gui": "^0.2.1",
+    "gui": "^0.4.3",
     "react": "^16.2.0",
-    "react-reconciler": "^0.7.0"
+    "react-reconciler": "^0.10.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.35",
     "@babel/core": "^7.0.0-beta.35",
     "@babel/preset-env": "^7.0.0-beta.35",
     "@babel/preset-react": "^7.0.0-beta.35",
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "chokidar": "^2.0.3",
     "eslint": "^4.13.1",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
@@ -43,9 +49,13 @@
         }
       ],
       "@babel/preset-react"
+    ],
+    "plugins": [
+      "transform-class-properties"
     ]
   },
   "eslintConfig": {
+    "parser": "babel-eslint",
     "env": {
       "node": true,
       "jest": true
@@ -61,7 +71,8 @@
       "no-underscore-dangle": 0,
       "no-param-reassign": 0,
       "import/prefer-default-export": 0,
-      "react/jsx-filename-extension": 0
+      "react/jsx-filename-extension": 0,
+      "jsx-a11y/label-has-for": 0
     }
   }
 }

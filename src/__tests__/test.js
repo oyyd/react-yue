@@ -24,6 +24,6 @@ win.center()
 win.activate()
 
 if (!process.versions.yode) {
-  gui.lifetime.run()
+  gui.MessageLoop.run()
   process.exit(0)
 }
