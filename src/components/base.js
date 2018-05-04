@@ -1,12 +1,12 @@
 // TODO: alert invalid style props
 // TODO: error boundaries
-import { emptyFunc } from '../utils'
+const { emptyFunc } = require('../utils')
 
 function getListenerIdName(name) {
   return `__${name}SlotId`
 }
 
-export default class Base {
+class Base {
   constructor(_ele) {
     this._ele = _ele
   }
@@ -38,3 +38,5 @@ Base.prototype.addChildView = emptyFunc
 Base.prototype.update = emptyFunc
 Base.prototype.removeChildView = emptyFunc
 Base.prototype.insertBefore = emptyFunc
+
+module.exports = Base

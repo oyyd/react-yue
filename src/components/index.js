@@ -1,14 +1,14 @@
-import button from './button'
-import container from './container'
-import entry from './entry'
-import group from './group'
-import progressbar from './progress_bar'
-import scroll from './scroll'
-import label from './label'
-import textedit from './text_edit'
-import vibrant from './vibrant'
+const button = require('./button')
+const container = require('./container')
+const entry = require('./entry')
+const group = require('./group')
+const progressbar = require('./progress_bar')
+const scroll = require('./scroll')
+const label = require('./label')
+const textedit = require('./text_edit')
+const vibrant = require('./vibrant')
 
-export const Components = {
+const Components = {
   button,
   container,
   entry,
@@ -20,6 +20,11 @@ export const Components = {
   vibrant,
 }
 
-export function hasComponent(type) {
+function hasComponent(type) {
   return Object.hasOwnProperty.call(Components, type)
+}
+
+module.exports = {
+  hasComponent,
+  Components,
 }

@@ -1,7 +1,7 @@
-import { Button } from 'gui'
-import Base from './base'
+const { Button } = require('gui')
+const Base = require('./base')
 
-export default class Wrapper extends Base {
+module.exports = class Wrapper extends Base {
   constructor(props) {
     super(Button.create({
       title: '',

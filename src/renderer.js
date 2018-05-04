@@ -1,6 +1,6 @@
-import Reconciler from 'react-reconciler'
-import { Components, hasComponent } from './components'
-import { emptyObject, now, scheduleDeferredCallback } from './utils'
+const Reconciler = require('react-reconciler')
+const { Components, hasComponent } = require('./components')
+const { emptyObject, now, scheduleDeferredCallback } = require('./utils')
 
 function appendInitialChild(parentInstance, child) {
   // TODO: views that do not support addChildView
@@ -11,6 +11,8 @@ function createInstance(type, props, internalInstanceHandle) {
   if (!hasComponent(type)) {
     throw new Error(`receive invalid type: ${type}`)
   }
+
+  // console.error('internalInstanceHandle', internalInstanceHandle)
 
   const Comp = Components[type]
 
@@ -27,7 +29,9 @@ function getPublicInstance(...args) {
   console.log('getPublicInstance')
 }
 
-function prepareForCommit() {}
+function prepareForCommit() {
+  // console.log('getPublicInstance')
+}
 
 function prepareUpdate() {
   // always update
@@ -146,7 +150,7 @@ export const YueRenderer = Reconciler({
   },
 })
 
-export function render(element, guiContainer, callback) {
+function render(element, guiContainer, callback) {
   let root = guiContainer._reactRootContainer
 
   if (!root) {
@@ -163,4 +167,8 @@ export function render(element, guiContainer, callback) {
   }
 
   return YueRenderer.updateContainer(element, root, null, callback)
+}
+
+module.exports = {
+  render,
 }

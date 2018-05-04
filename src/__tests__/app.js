@@ -70,9 +70,6 @@ render(ele, contentView, () => {
   console.log('__A')
 })
 
-win.center()
-win.activate()
-
 // setTimeout(() => {
 //   const ele2 = (
 //     <container

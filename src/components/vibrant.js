@@ -1,7 +1,7 @@
-import { Vibrant } from 'gui'
-import Container from './container'
+const { Vibrant } = require('gui')
+const Container = require('./container')
 
-export default class Wrapper extends Container {
+module.exports = class Wrapper extends Container {
   constructor(props) {
     super(props, Vibrant.create())
 

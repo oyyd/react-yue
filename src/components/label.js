@@ -1,7 +1,7 @@
-import { Label } from 'gui'
-import Base from './base'
+const { Label } = require('gui')
+const Base = require('./base')
 
-export default class Wrapper extends Base {
+module.exports = class Wrapper extends Base {
   constructor(props) {
     super(Label.create(''))
 

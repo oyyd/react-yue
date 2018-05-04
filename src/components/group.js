@@ -1,8 +1,8 @@
-import { View, Group } from 'gui'
-import Base from './base'
-import { STRICT_CHECK, warn } from '../utils'
+const { View, Group } = require('gui')
+const Base = require('./base')
+const { STRICT_CHECK, warn } = require('../utils')
 
-export default class Wrapper extends Base {
+module.exports = class Wrapper extends Base {
   constructor(props) {
     super(Group.create(''))
 

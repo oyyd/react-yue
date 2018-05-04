@@ -8,28 +8,25 @@
     "dev": "node scripts/dev",
     "build_lib": "babel src --out-dir lib -w",
     "build": "babel src --out-dir lib",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "oyyd <oyydoibh@gmail.com>",
   "files": [
     "lib",
     "README.md"
   ],
+  "peerDependencies": {
+    "gui": "0.4.3",
+    "react": "^16.2.0"
+  },
   "dependencies": {
-    "aws-sdk": "^2.230.1",
-    "gui": "^0.4.3",
-    "prop-types": "^15.6.1",
-    "react": "^16.2.0",
-    "react-reconciler": "^0.10.0",
-    "react-redux": "^5.0.7",
-    "redux": "^4.0.0"
+    "react-reconciler": "^0.10.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.35",
     "@babel/core": "^7.0.0-beta.35",
     "@babel/preset-env": "^7.0.0-beta.35",
     "@babel/preset-react": "^7.0.0-beta.35",
-    "babel-eslint": "^8.2.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "chokidar": "^2.0.3",
     "eslint": "^4.13.1",
@@ -38,6 +35,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
+    "gui": "0.4.3",
     "jest": "^22.0.3",
     "react": "^16.2.0"
   },
@@ -58,8 +56,10 @@
       "transform-class-properties"
     ]
   },
+  "jest": {
+    "testRegex": "lib\\/.*__tests__\\/.*\\.spec\\.js$"
+  },
   "eslintConfig": {
-    "parser": "babel-eslint",
     "env": {
       "node": true,
       "jest": true

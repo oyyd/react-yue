@@ -2,18 +2,18 @@ const hasNativePerformanceNow =
   // eslint-disable-next-line
   typeof performance === 'object' && typeof performance.now === 'function'
 
-export const STRICT_CHECK = true
+const STRICT_CHECK = true
 
-export const emptyObject = {}
+const emptyObject = {}
 
-export const emptyFunc = () => {}
+const emptyFunc = () => {}
 
-export const now = hasNativePerformanceNow
+const now = hasNativePerformanceNow
   // eslint-disable-next-line
   ? () => performance.now()
   : () => Date.now()
 
-export function scheduleDeferredCallback(frameCallback) {
+function scheduleDeferredCallback(frameCallback) {
   return setTimeout(() => {
     frameCallback({
       timeRemaining() {
@@ -23,7 +23,16 @@ export function scheduleDeferredCallback(frameCallback) {
   })
 }
 
-export function warn(msg) {
+function warn(msg) {
   // eslint-disable-next-line
   console.warn(msg)
+}
+
+module.exports = {
+  STRICT_CHECK,
+  emptyFunc,
+  emptyObject,
+  now,
+  scheduleDeferredCallback,
+  warn,
 }
