@@ -15,8 +15,12 @@ module.exports = class Wrapper extends Base {
       this._ele.setContentSize(props.contentSize)
     }
 
-    if (props.scrollbarPolicy) {
-      this._ele.setIndeterminate(props.scrollbarPolicy)
+    if (props.hpolicy && props.vpolicy) {
+      this._ele.setScrollbarPolicy(props.hpolicy, props.vpolicy)
+    }
+
+    if (props.overlayScrollbar) {
+      this._ele.setOverlayScrollbar(props.overlayScrollbar)
     }
   }
 

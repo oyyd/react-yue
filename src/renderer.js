@@ -25,8 +25,8 @@ function finalizeInitialChildren(docElement, type, props) {
   return false
 }
 
-function getPublicInstance(...args) {
-  console.log('getPublicInstance')
+function getPublicInstance(instance) {
+  return instance._ele
 }
 
 function prepareForCommit() {

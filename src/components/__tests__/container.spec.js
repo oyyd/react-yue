@@ -2,7 +2,7 @@ const React = require('react')
 const gui = require('gui')
 const { createTestSuite } = require('./utils')
 
-describe('button', () => {
+describe('container', () => {
   it('should render the component correctly', done => {
     createTestSuite(render => {
       const title = 'hello'
@@ -10,7 +10,7 @@ describe('button', () => {
       const image = gui.Image.createFromBuffer(Buffer.alloc(0), 1)
 
       const ele = (
-        <button
+        <container
           title={title}
           checked={checked}
           defaultChecked={checked}
@@ -18,12 +18,9 @@ describe('button', () => {
         />
       )
 
-      render(ele, container => {
-        const button = container.childAt(0)
-        expect(button instanceof gui.Button).toBeTruthy()
-        expect(button.getTitle()).toBe(title)
-        expect(button.isChecked()).toBe(checked)
-        expect(button.getImage()).toBe(image)
+      render(ele, _container => {
+        const container = _container.childAt(0)
+        expect(container instanceof gui.Container).toBeTruthy()
         done()
       })
     })

@@ -6,30 +6,6 @@ const React = require('react')
 const gui = require('gui')
 const { render } = require('../index')
 
-// eslint-disable-next-line
-class MyComp extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {}
-  }
-
-  componentDidMount() {
-    // console.log('mount')
-  }
-
-  render() {
-    return (
-      <container>
-        <button
-          title="MyComp"
-          onClick={() => console.log('ENTER')}
-        />
-      </container>
-    )
-  }
-}
-
 const ele = (
   <vibrant
     style={{

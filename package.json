@@ -1,6 +1,6 @@
 {
   "name": "react-yue",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Render the view of GUI apps with yue and react.",
   "main": "index.js",
   "scripts": {

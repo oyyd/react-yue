@@ -8,6 +8,10 @@ module.exports = class Wrapper extends Base {
       type: props.type || 'normal',
     }))
 
+    if (props.defaultChecked) {
+      this._ele.setChecked(props.defaultChecked)
+    }
+
     this.update(null, props)
   }
 
