@@ -4,6 +4,9 @@ os:
 node_js:
   - "8"
   - "9"
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install libwebkit2gtk-4.0-37
 script:
   - npm run test
 branches:
