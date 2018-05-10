@@ -27,7 +27,6 @@
     "@babel/core": "^7.0.0-beta.35",
     "@babel/preset-env": "^7.0.0-beta.35",
     "@babel/preset-react": "^7.0.0-beta.35",
-    "babel-plugin-transform-class-properties": "^6.24.1",
     "chokidar": "^2.0.3",
     "eslint": "^4.13.1",
     "eslint-config-airbnb": "^16.1.0",
@@ -51,9 +50,6 @@
         }
       ],
       "@babel/preset-react"
-    ],
-    "plugins": [
-      "transform-class-properties"
     ]
   },
   "jest": {
