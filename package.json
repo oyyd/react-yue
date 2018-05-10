@@ -8,7 +8,7 @@
     "dev": "node scripts/dev",
     "build_lib": "babel src --out-dir lib -w",
     "build": "babel src --out-dir lib",
-    "test": "jest"
+    "test": "npm run build && jest"
   },
   "author": "oyyd <oyydoibh@gmail.com>",
   "files": [
