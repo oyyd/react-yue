@@ -1,79 +1,38 @@
-// NOTE: force "production" or the react-reconciler will
-// swallow errors in environments where DOM doesn't exist
-process.env.NODE_ENV = 'production'
-
 const React = require('react')
 const gui = require('gui')
 const { render } = require('../index')
 
-const ele = (
-  <vibrant
-    style={{
-      flexDirection: 'row',
-      flex: 1,
-    }}
-  >
+// Create your react component:
+function App() {
+  return (
     <container
       style={{
+        flexDirection: 'row',
         flex: 1,
+        justifyContent: 'center',
       }}
     >
       <label
         text="hello"
       />
     </container>
-    <container
-      style={{
-        flex: 1,
-      }}
-    >
-      <label
-        text="hello2"
-      />
-    </container>
-  </vibrant>
-)
+  )
+}
 
+// Create a window and a root container:
 const win = gui.Window.create({})
-win.setContentSize({ width: 400, height: 400 })
-win.onClose = () => gui.lifetime.quit()
+win.setContentSize({ width: 400, height: 250 })
 
 const contentView = gui.Container.create()
 contentView.setStyle({ flexDirection: 'row' })
 win.setContentView(contentView)
+win.center()
+win.activate()
 
-render(ele, contentView, () => {
-  console.log('__A')
-})
+// Create your react elements and render them:
+render(<App />, contentView)
 
-// setTimeout(() => {
-//   const ele2 = (
-//     <container
-//       style={{
-//         flexDirection: 'row',
-//       }}
-//     >
-//       <button
-//         title="Hello2"
-//         style={{
-//           color: '#DDDDDD',
-//         }}
-//       />
-//       <entry />
-//       {['e', 'b', 'c'].map(i => (
-//         <button
-//           key={i}
-//           title={i}
-//         />
-//       ))}
-//     </container>
-//   )
-//
-//   render(ele2, contentView, () => {
-//     console.log('__B')
-//   })
-// })
-
+// Start your app
 if (!process.versions.yode) {
   gui.MessageLoop.run()
   process.exit(0)

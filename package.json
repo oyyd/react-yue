@@ -1,6 +1,6 @@
 {
   "name": "react-yue",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "Render the view of GUI apps with yue and react.",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,6 @@
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "chokidar": "^2.0.3",
     "eslint": "^4.13.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-babel": "^5.1.0",
