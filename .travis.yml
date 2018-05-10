@@ -1,0 +1,13 @@
+language: node_js
+os:
+  - linux
+node_js:
+  - "6"
+  - "8"
+  - "9"
+script:
+  - npm run test
+branches:
+  only:
+    - master
+    - dev

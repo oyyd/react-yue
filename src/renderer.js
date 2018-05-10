@@ -100,11 +100,11 @@ function commitUpdate(instance, updatePayload, type, oldProps, newProps) {
 }
 
 function commitMount(instance, updatePayload, type, oldProps, newProps) {
-  console.log('commitMount')
+  // console.log('commitMount')
 }
 
 function commitTextUpdate(textInstance, oldText, newText) {
-  console.log('commitTextUpdate')
+  // console.log('commitTextUpdate')
 }
 
 export const YueRenderer = Reconciler({
