@@ -1,7 +1,7 @@
 {
   "name": "react-yue",
   "version": "0.1.0",
-  "description": "Render the view of GUI apps with yue and react.",
+  "description": "This is a lib to help you render the View of Yue in the react way.",
   "main": "index.js",
   "scripts": {
     "start": "node lib/do_space/index",

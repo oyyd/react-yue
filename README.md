@@ -56,14 +56,14 @@ if (!process.versions.yode) {
 
 #### Button
 
-**props:**
+_props:_
 
 - `Button::Type` type
 - `Boolean` defaultChecked
 - `String` title
 - `Image` image
 
-**events:**
+_events:_
 
 - onClick(self)
   - params
@@ -71,7 +71,7 @@ if (!process.versions.yode) {
 
 #### Container
 
-**events:**
+_events:_
 
 - onDraw(self, painter, painter)
   - params
@@ -81,12 +81,12 @@ if (!process.versions.yode) {
 
 #### Entry
 
-**props:**
+_props:_
 
 - `Entry::Type` type
 - `String` text
 
-**events:**
+_events:_
 
 - onTextChange(self)
   - params
@@ -97,27 +97,27 @@ if (!process.versions.yode) {
 
 #### Group
 
-**props:**
+_props:_
 
 - `String` title
 - `View` children
 
 #### Label
 
-**props:**
+_props:_
 
 - `String` text
 
 #### ProgressBar
 
-**props:**
+_props:_
 
 - `Number` percent
 - `Boolean` indeterminate
 
 #### Scroll
 
-**props:**
+_props:_
 
 - `Scroll::Policy` hpolicy
 - `Scroll::Policy` vpolicy
@@ -127,14 +127,14 @@ if (!process.versions.yode) {
 
 #### TextEdit
 
-**props:**
+_props:_
 
 - `String` text
 - `Scroll::Policy` hpolicy
 - `Scroll::Policy` vpolicy
 - `Boolean` overlayScrollbar
 
-**events:**
+_events:_
 
 - onTextChange(self)
   - params
@@ -142,7 +142,7 @@ if (!process.versions.yode) {
 
 #### Vibrant
 
-**props:**
+_props:_
 
 - `Vibrant::Material` material
 - `Vibrant::BlendingMode` mode
