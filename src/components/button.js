@@ -16,7 +16,7 @@ module.exports = class Wrapper extends Base {
   }
 
   update(lastProps, props) {
-    this.applyStyle(props.style)
+    super.update(lastProps, props)
 
     if (props.title) {
       this._ele.setTitle(props.title)

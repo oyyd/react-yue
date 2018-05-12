@@ -1,5 +1,7 @@
 # react-yue
 
+[![npm-version](https://img.shields.io/npm/v/react-yue.svg?style=flat-square)](https://www.npmjs.com/package/react-yue)
+
 This is a lib to help you render the [View](http://libyue.com/docs/latest/js/api/view.html) of [Yue](https://github.com/yue/yue/) in the react way.
 
 ## Get Started
@@ -53,6 +55,56 @@ if (!process.versions.yode) {
 ```
 
 ## Components
+
+#### View (base class)
+
+_props:_
+
+- `Boolean` visible
+- `Boolean` enabled
+- `Boolean` focusable
+- `Boolean` mouseDownCanMoveWindow
+- `Font` font
+- `Color` color
+- `Color` backgroundColor
+
+_events:_
+
+- onMouseDown
+  - params
+    - `View` self
+- onMouseUp
+  - params
+    - `View` self
+    - `MouseEvent` event
+- onMouseMove
+  - params
+    - `View` self
+    - `MouseEvent` event
+- onMouseEnter
+  - params
+    - `View` self
+    - `MouseEvent` event
+- onMouseLeave
+  - params
+    - `View` self
+    - `MouseEvent` event
+- onKeyDown
+  - params
+    - `View` self
+    - `KeyEvent` event
+- onKeyUp
+  - params
+    - `View` self
+    - `KeyEvent` event
+- onSizeChanged
+  - params
+    - `View` self
+    - `KeyEvent` event
+- onCaptureLost
+  - params
+    - `View` self
+    - `KeyEvent` event
 
 #### Button
 

@@ -17,12 +17,11 @@ module.exports = class Wrapper extends Base {
   }
 
   update(lastProps, props) {
+    super.update(lastProps, props)
+
     if (props.defaultText) {
       this._ele.setText(props.defaultText)
     }
-
-    // style
-    this.applyStyle(props.style)
 
     // event
     this.updateSignal('onTextChange', props.onTextChange)

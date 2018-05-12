@@ -10,7 +10,8 @@ module.exports = class Wrapper extends Base {
 
   // TODO: use "lastProps" to avoid unnecessary updating
   update(lastProps, props) {
-    this.applyStyle(props.style)
+    super.update(lastProps, props)
+
     this.updateSignal('onDraw', props.onDraw)
   }
 

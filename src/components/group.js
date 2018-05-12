@@ -10,12 +10,11 @@ module.exports = class Wrapper extends Base {
   }
 
   update(lastProps, props) {
+    super.update(lastProps, props)
+
     if (props.title) {
       this._ele.setTitle(props.title)
     }
-
-    // style
-    this.applyStyle(props.style)
   }
 
   addChildView(child) {

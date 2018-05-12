@@ -9,7 +9,7 @@ module.exports = class Wrapper extends Base {
   }
 
   update(lastProps, props) {
-    this.applyStyle(props.style)
+    super.update(lastProps, props)
 
     if (props.text) {
       this._ele.setText(props.text)
