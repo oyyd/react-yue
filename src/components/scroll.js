@@ -1,5 +1,6 @@
 const { Scroll } = require('gui')
 const Base = require('./base')
+const { warn } = require('./log')
 
 module.exports = class Wrapper extends Base {
   constructor(props) {
@@ -25,9 +26,11 @@ module.exports = class Wrapper extends Base {
   }
 
   addChildView(child) {
-    // TODO: support only one child
     this._ele.setContentView(child._ele)
   }
 
-  // TODO: Yue should support remove content view.
+  // eslint-disable-next-line
+  insertBefore() {
+    warn('insertBefore of scroll in a non-op')
+  }
 }

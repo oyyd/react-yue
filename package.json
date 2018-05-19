@@ -1,11 +1,10 @@
 {
   "name": "react-yue",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "This is a lib to help you render the View of Yue in the react way.",
   "main": "lib/index.js",
   "scripts": {
-    "start": "node lib/do_space/index",
-    "dev": "node scripts/dev",
+    "example": "node lib/__tests__/app.js",
     "build_lib": "babel src --out-dir lib -w",
     "build": "babel src --out-dir lib",
     "test": "npm run build && jest"
@@ -20,6 +19,7 @@
     "react": "^16.2.0"
   },
   "dependencies": {
+    "gui": "^0.4.3",
     "react-reconciler": "^0.10.0"
   },
   "devDependencies": {
