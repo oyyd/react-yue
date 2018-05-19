@@ -88,8 +88,8 @@ class Base {
       lastProps = {}
     }
 
-    const { func } = props
-    const { lastFunc } = lastProps
+    const func = props[name]
+    const lastFunc = lastProps[name]
 
     if (func === lastFunc) {
       return

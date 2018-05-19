@@ -21,8 +21,13 @@ function App() {
         flex: 1,
       }}
     >
-      <label text="hello" />
-      <scroll
+      <button
+        title="click"
+        onClick={() => {
+          console.log('enTER')
+        }}
+      />
+      {/* <scroll
         ref={s => {
           console.log(s.getContentSize())
         }}
@@ -43,14 +48,10 @@ function App() {
             height: 1000,
           }}
         >
-          {ITEMS.map(i => (
-            <label
-              text={String(i)}
-            />
-          ))}
+          {ITEMS.map(i => <label text={String(i)} />)}
         </container>
       </scroll>
-      <label text="hello" />
+      <label text="hello" /> */}
     </container>
   )
 }
