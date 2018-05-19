@@ -19,6 +19,6 @@ module.exports = class Wrapper extends Base {
       this._ele.setIndeterminate(props.indeterminate)
     }
 
-    this.updateSignal('onClick', props.onClick)
+    this.updateSignal('onClick', props, lastProps)
   }
 }

@@ -72,34 +72,25 @@ class Base {
       this.getElement().setBackgroundColor(props.backgroundColor)
     }
 
-    this.updateSignal('onMouseDown', props.onMouseDown, lastProps.onMouseDown)
-    this.updateSignal('onMouseUp', props.onMouseUp, lastProps.onMouseUp)
-    this.updateSignal('onMouseMove', props.onMouseMove, lastProps.onMouseMove)
-    this.updateSignal(
-      'onMouseEnter',
-      props.onMouseEnter,
-      lastProps.onMouseEnter
-    )
-    this.updateSignal(
-      'onMouseLeave',
-      props.onMouseLeave,
-      lastProps.onMouseLeave
-    )
-    this.updateSignal('onKeyDown', props.onKeyDown, lastProps.onKeyDown)
-    this.updateSignal('onKeyUp', props.onKeyUp, lastProps.onKeyUp)
-    this.updateSignal(
-      'onSizeChanged',
-      props.onSizeChanged,
-      lastProps.onSizeChanged
-    )
-    this.updateSignal(
-      'onCaptureLost',
-      props.onCaptureLost,
-      lastProps.onCaptureLost
-    )
+    this.updateSignal('onMouseDown', props, lastProps)
+    this.updateSignal('onMouseUp', props, lastProps)
+    this.updateSignal('onMouseMove', props, lastProps)
+    this.updateSignal('onMouseEnter', props, lastProps)
+    this.updateSignal('onMouseLeave', props, lastProps)
+    this.updateSignal('onKeyDown', props, lastProps)
+    this.updateSignal('onKeyUp', props, lastProps)
+    this.updateSignal('onSizeChanged', props, lastProps)
+    this.updateSignal('onCaptureLost', props, lastProps)
   }
 
-  updateSignal(name, func, lastFunc) {
+  updateSignal(name, props, lastProps) {
+    if (!lastProps) {
+      lastProps = {}
+    }
+
+    const { func } = props
+    const { lastFunc } = lastProps
+
     if (func === lastFunc) {
       return
     }

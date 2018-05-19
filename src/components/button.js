@@ -26,6 +26,6 @@ module.exports = class Wrapper extends Base {
       this._ele.setImage(props.image)
     }
 
-    this.updateSignal('onClick', props.onClick)
+    this.updateSignal('onClick', props, lastProps)
   }
 }

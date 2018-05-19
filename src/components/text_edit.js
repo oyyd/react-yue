@@ -27,6 +27,6 @@ module.exports = class Wrapper extends Base {
       this._ele.setOverlayScrollbar(props.overlayScrollbar)
     }
 
-    this.updateSignal('onTextChange', props.onTextChange)
+    this.updateSignal('onTextChange', props, lastProps)
   }
 }

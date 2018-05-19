@@ -12,7 +12,7 @@ module.exports = class Wrapper extends Base {
   update(lastProps, props) {
     super.update(lastProps, props)
 
-    this.updateSignal('onDraw', props.onDraw)
+    this.updateSignal('onDraw', props, lastProps)
   }
 
   addChildView(child) {
