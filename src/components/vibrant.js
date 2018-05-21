@@ -1,5 +1,6 @@
 const { Vibrant } = require('gui')
 const Container = require('./container')
+const { shoudUpdate } = require('../utils')
 
 module.exports = class Wrapper extends Container {
   constructor(props) {
@@ -12,11 +13,11 @@ module.exports = class Wrapper extends Container {
   update(lastProps, props) {
     super.update(lastProps, props)
 
-    if (props.material) {
+    if (shoudUpdate(props, lastProps, 'material')) {
       this._ele.setMaterial(props.material)
     }
 
-    if (props.blendingMode) {
+    if (shoudUpdate(props, lastProps, 'blendingMode')) {
       this._ele.setBlendingMode(props.blendingMode)
     }
   }

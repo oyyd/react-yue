@@ -28,6 +28,18 @@ function warn(msg) {
   console.warn(msg)
 }
 
+function shoudUpdate(props, lastProps, propName) {
+  if (!props || props[propName] === undefined) {
+    return false
+  }
+
+  if (!lastProps) {
+    return true
+  }
+
+  return props[propName] === lastProps[propName]
+}
+
 module.exports = {
   STRICT_CHECK,
   emptyFunc,
@@ -35,4 +47,5 @@ module.exports = {
   now,
   scheduleDeferredCallback,
   warn,
+  shoudUpdate,
 }

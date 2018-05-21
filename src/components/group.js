@@ -1,6 +1,7 @@
 const { View, Group } = require('gui')
 const Base = require('./base')
 const { STRICT_CHECK, warn } = require('../utils')
+const { shoudUpdate } = require('../utils')
 
 module.exports = class Wrapper extends Base {
   constructor(props) {
@@ -12,7 +13,7 @@ module.exports = class Wrapper extends Base {
   update(lastProps, props) {
     super.update(lastProps, props)
 
-    if (props.title) {
+    if (shoudUpdate(props, lastProps, 'title')) {
       this._ele.setTitle(props.title)
     }
   }

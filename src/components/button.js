@@ -1,5 +1,6 @@
 const { Button } = require('gui')
 const Base = require('./base')
+const { shoudUpdate } = require('../utils')
 
 module.exports = class Wrapper extends Base {
   constructor(props) {
@@ -18,11 +19,11 @@ module.exports = class Wrapper extends Base {
   update(lastProps, props) {
     super.update(lastProps, props)
 
-    if (props.title) {
+    if (shoudUpdate(props, lastProps, 'title')) {
       this._ele.setTitle(props.title)
     }
 
-    if (props.image) {
+    if (shoudUpdate(props, lastProps, 'image')) {
       this._ele.setImage(props.image)
     }
 

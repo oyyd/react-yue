@@ -1,5 +1,6 @@
 const { TextEdit } = require('gui')
 const Base = require('./base')
+const { shoudUpdate } = require('../utils')
 
 module.exports = class Wrapper extends Base {
   constructor(props) {
@@ -15,15 +16,16 @@ module.exports = class Wrapper extends Base {
   update(lastProps, props) {
     super.update(lastProps, props)
 
-    if (props.text) {
+    if (shoudUpdate(props, lastProps, 'text')) {
       this._ele.setText(props.text)
     }
 
+    // TODO:
     if (props.hpolicy && props.vpolicy) {
       this._ele.setScrollbarPolicy(props.hpolicy, props.vpolicy)
     }
 
-    if (props.overlayScrollbar) {
+    if (shoudUpdate(props, lastProps, 'overlayScrollbar')) {
       this._ele.setOverlayScrollbar(props.overlayScrollbar)
     }
 

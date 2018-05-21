@@ -6,10 +6,14 @@ describe('label', () => {
   it('should render the component correctly', done => {
     createTestSuite(render => {
       const text = 'hello'
+      const align = 'start'
+      const vAlign = 'center'
 
       const ele = (
         <label
           text={text}
+          align={align}
+          vAlign={vAlign}
         />
       )
 
