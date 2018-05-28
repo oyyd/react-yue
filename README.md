@@ -4,6 +4,8 @@
 
 This is a lib to help you render the [View](http://libyue.com/docs/latest/js/api/view.html) of [Yue](https://github.com/yue/yue/) in the react way.
 
+You may want to check [do-space-client](https://github.com/oyyd/do-space-client) as an example of using react-yue:
+
 ## Get Started
 
 ```
@@ -13,9 +15,9 @@ npm i react-yue react gui
 Render your view into a container:
 
 ```js
-const React = require('react')
-const gui = require('gui')
-const { render } = require('react-yue')
+import React from 'react'
+import gui from 'gui'
+import { render } from 'react-yue'
 
 // Create your react component:
 function App() {
@@ -54,7 +56,78 @@ if (!process.versions.yode) {
 }
 ```
 
+Check this **ES5** example if you want to run it without code transforming:
+
+```js
+const React = require('react')
+const gui = require('gui')
+const { render } = require('react-yue')
+
+// Create your react component:
+function App() {
+  return React.createElement('container', {
+    style: {
+      flexDirection: 'row',
+      flex: 1,
+      justifyContent: 'center',
+    },
+    React.createElement('label', {
+      text: 'hello',
+    })
+  })
+}
+
+// Create a window and a root container:
+const win = gui.Window.create({})
+win.setContentSize({ width: 400, height: 250 })
+
+const contentView = gui.Container.create()
+contentView.setStyle({ flexDirection: 'row' })
+win.setContentView(contentView)
+win.center()
+win.activate()
+
+// Create your react elements and render them:
+render(React.createElement(App), contentView)
+
+// Start your app
+if (!process.versions.yode) {
+  gui.MessageLoop.run()
+  process.exit(0)
+}
+```
+
+## Style / Layout
+
+Yue use [yoga layout](https://libyue.com/docs/latest/js/guides/layout_system.html) and you can use these properties in the `style` property:
+
+```js
+import React from 'react'
+
+export default function MyComp() {
+  return (
+    <container
+      style={{
+        flex: 1,
+        flexDirection: 'row',
+      }}
+    >
+      <container
+        style={{
+          justifyContent: 'center',
+        }}
+      >
+        <label text="hello" />
+      </container>
+    </container>
+  )
+}
+
+```
+
 ## Components
+
+Below are what components and their props you can use with react-yue. For more details, please check the [official document](https://libyue.com/docs/latest/js/).
 
 #### View (base class)
 
