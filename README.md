@@ -4,7 +4,7 @@
 
 This is a lib to help you render the [View](http://libyue.com/docs/latest/js/api/view.html) of [Yue](https://github.com/yue/yue/) in the react way.
 
-You may want to check [do-space-client](https://github.com/oyyd/do-space-client) as an example of using react-yue:
+You may want to check [do-space-client](https://github.com/oyyd/do-space-client) as an example of using react-yue.
 
 ## Get Started
 
