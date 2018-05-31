@@ -43,7 +43,9 @@
     ]
   },
   "jest": {
-    "testRegex": "lib\\/.*__tests__\\/.*\\.spec\\.js$"
+    "testMatch": [
+      "**/lib/**/__tests__/**/?(*.)+(spec|test).js?(x)"
+    ]
   },
   "eslintConfig": {
     "env": {
