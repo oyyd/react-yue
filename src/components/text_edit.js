@@ -1,6 +1,6 @@
 const { TextEdit } = require('gui')
 const Base = require('./base')
-const { shoudUpdate } = require('../utils')
+const { shoudUpdate, win32 } = require('../utils')
 
 module.exports = class Wrapper extends Base {
   constructor(props) {
@@ -25,7 +25,7 @@ module.exports = class Wrapper extends Base {
       this._ele.setScrollbarPolicy(props.hpolicy, props.vpolicy)
     }
 
-    if (shoudUpdate(props, lastProps, 'overlayScrollbar')) {
+    if (!win32 && shoudUpdate(props, lastProps, 'overlayScrollbar')) {
       this._ele.setOverlayScrollbar(props.overlayScrollbar)
     }
 

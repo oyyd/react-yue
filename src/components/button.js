@@ -2,6 +2,7 @@ const { Button } = require('gui')
 const Base = require('./base')
 const { shoudUpdate } = require('../utils')
 
+// TODO: add button style and border
 module.exports = class Wrapper extends Base {
   constructor(props) {
     super(Button.create({

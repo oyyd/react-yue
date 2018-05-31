@@ -1,3 +1,5 @@
+const win32 = process.platform === 'win32'
+
 const hasNativePerformanceNow =
   // eslint-disable-next-line
   typeof performance === 'object' && typeof performance.now === 'function'
@@ -48,4 +50,5 @@ module.exports = {
   scheduleDeferredCallback,
   warn,
   shoudUpdate,
+  win32,
 }
