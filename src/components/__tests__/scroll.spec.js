@@ -1,6 +1,7 @@
 const React = require('react')
 const gui = require('gui')
 const { createTestSuite } = require('./utils')
+const { win32 } = require('../../utils')
 
 describe('scroll', () => {
   it('should render the component correctly', done => {
@@ -25,8 +26,11 @@ describe('scroll', () => {
         const scroll = container.childAt(0)
         expect(scroll instanceof gui.Scroll).toBeTruthy()
         const size = scroll.getContentSize()
-        expect(size.width).toBe(contentSize.width)
-        expect(size.height).toBe(contentSize.height)
+        // NOTE: The value may be not accurate in windows
+        if (!win32) {
+          expect(size.width).toBe(contentSize.width)
+          expect(size.height).toBe(contentSize.height)
+        }
         // expect(scroll.isOverlayScrollbar()).toBe(overlayScrollbar)
         const policies = scroll.getScrollbarPolicy()
         expect(policies[0]).toBe(hpolicy)
