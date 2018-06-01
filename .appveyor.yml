@@ -18,4 +18,4 @@ install:
 # disable build and test pahses
 build: off
 test_script:
-  - cmd: npm run test
+  - npm run test
