@@ -11,7 +11,7 @@ function main() {
   setTimeout(() => {
     child.kill()
     process.exit()
-  }, 30 * 1000)
+  }, 2 * 60 * 1000)
 
   child.on('exit', (code) => {
     process.exit(code)

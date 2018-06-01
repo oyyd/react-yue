@@ -1,6 +1,9 @@
 # react-yue
 
 [![npm-version](https://img.shields.io/npm/v/react-yue.svg?style=flat-square)](https://www.npmjs.com/package/react-yue)
+[![build-badge](https://ci.appveyor.com/api/projects/status/qse4t1mtex8ccsep?svg=true)](https://ci.appveyor.com/api/projects/status/qse4t1mtex8ccsep/branch/master?svg=true
+)
+
 
 This is a lib to help you render the [View](http://libyue.com/docs/latest/js/api/view.html) of [Yue](https://github.com/yue/yue/) in the react way.
 
