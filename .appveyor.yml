@@ -14,8 +14,8 @@ install:
   - cmd: SET PATH=C:\Program Files (x86)\MSBuild\14.0\bin\;%PATH%
   - cmd: SET PATH=C:\python27;%PATH%
   - cmd: npm install
-  - cmd: npm run test
 
 # disable build and test pahses
 build: off
-test: off
+test_script:
+  - cmd: npm run test
