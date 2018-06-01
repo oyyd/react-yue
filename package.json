@@ -7,6 +7,7 @@
     "example": "node lib/__tests__/app.js",
     "build_lib": "babel src --out-dir lib -w",
     "build": "babel src --out-dir lib",
+    "jest": "jest",
     "test": "npm run build && node test.js"
   },
   "author": "oyyd <oyydoibh@gmail.com>",
