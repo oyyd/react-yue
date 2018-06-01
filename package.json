@@ -7,7 +7,7 @@
     "example": "node lib/__tests__/app.js",
     "build_lib": "babel src --out-dir lib -w",
     "build": "babel src --out-dir lib",
-    "test": "node test"
+    "test": "jest"
   },
   "author": "oyyd <oyydoibh@gmail.com>",
   "files": [
