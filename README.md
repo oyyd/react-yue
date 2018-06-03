@@ -7,7 +7,13 @@
 
 This is a lib to help you render the [View](http://libyue.com/docs/latest/js/api/view.html) of [Yue](https://github.com/yue/yue/) in the react way.
 
-You may want to check [do-space-client](https://github.com/oyyd/do-space-client) as an example of using react-yue.
+Moreover, it's possible to utilize react-yue to a hot reload developing experience.
+
+You may want to check [do-space-client](https://github.com/oyyd/do-space-client) as an example of using this lib.
+
+|mac|
+|---|
+|<img src="https://raw.githubusercontent.com/oyyd/do-space-client/static/site/screenshot.png" width="400px"/>|
 
 ## Get Started
 
@@ -74,10 +80,9 @@ function App() {
       flex: 1,
       justifyContent: 'center',
     },
-    React.createElement('label', {
-      text: 'hello',
-    })
-  })
+  }, React.createElement('label', {
+    text: 'hello',
+  }))
 }
 
 // Create a window and a root container:
@@ -274,6 +279,12 @@ _props:_
 
 - `Vibrant::Material` material
 - `Vibrant::BlendingMode` mode
+
+## Using with yackage
+
+React will `require` its modules dynamically so that you can't correctly package your apps when using [yackage](https://github.com/yue/yackage) to package your Node.js project into an executable.
+
+As yackage doesn't support customized code transforming, webpack is recommanded to bundle your js correctly. You can take [the config of do-space-client](https://github.com/oyyd/do-space-client/blob/master/webpack.config.js) as a reference.
 
 ## Run Tests
 
