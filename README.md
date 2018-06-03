@@ -65,7 +65,7 @@ if (!process.versions.yode) {
 }
 ```
 
-Check this **ES5** example if you want to run it without code transforming:
+Check this **ES5** example if you want to run it without any code transforming:
 
 ```js
 const React = require('react')
@@ -284,7 +284,7 @@ _props:_
 
 React will `require` its modules dynamically so that you can't correctly package your apps when using [yackage](https://github.com/yue/yackage) to package your Node.js project into an executable.
 
-As yackage doesn't support customized code transforming, webpack is recommanded to bundle your js correctly. You can take [the config of do-space-client](https://github.com/oyyd/do-space-client/blob/master/webpack.config.js) as a reference.
+As yackage doesn't support customized code transforming, webpack is recommended to bundle your js correctly. You can take [the config of do-space-client](https://github.com/oyyd/do-space-client/blob/master/webpack.config.js) as a reference.
 
 ## Run Tests
 
