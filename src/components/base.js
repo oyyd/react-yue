@@ -1,6 +1,7 @@
 // TODO: alert invalid style props
 // TODO: error boundaries
 const { emptyFunc } = require('../utils')
+const applyStyles = require('../apply_styles')
 
 function getListenerIdName(name) {
   return `__${name}SlotId`
@@ -17,7 +18,7 @@ class Base {
 
   applyStyle(style) {
     if (style && typeof style === 'object') {
-      this.getElement().setStyle(style)
+      applyStyles(this.getElement(), style)
     }
   }
 
@@ -55,21 +56,6 @@ class Base {
       props.mouseDownCanMoveWindow !== lastProps.mouseDownCanMoveWindow
     ) {
       this.getElement().setMouseDownCanMoveWindow(props.mouseDownCanMoveWindow)
-    }
-
-    if (props.font && props.font !== lastProps.font) {
-      this.getElement().setFont(props.font)
-    }
-
-    if (props.color && props.color !== lastProps.color) {
-      this.getElement().setColor(props.color)
-    }
-
-    if (
-      props.backgroundColor &&
-      props.backgroundColor !== lastProps.backgroundColor
-    ) {
-      this.getElement().setBackgroundColor(props.backgroundColor)
     }
 
     this.updateSignal('onMouseDown', props, lastProps)

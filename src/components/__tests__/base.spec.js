@@ -20,8 +20,10 @@ describe('base(view)', () => {
           mouseDownCanMoveWindow={mouseDownCanMoveWindow}
           focusable={focusable}
           font={font}
-          color={color}
-          backgroundColor={backgroundColor}
+          style={{
+            color,
+            backgroundColor,
+          }}
         />
       )
 
