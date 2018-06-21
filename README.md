@@ -9,7 +9,8 @@ This is a lib to help you render the [View](http://libyue.com/docs/latest/js/api
 
 Moreover, it's possible to utilize react-yue to a hot reload developing experience.
 
-You may want to check [do-space-client](https://github.com/oyyd/do-space-client) as an example of using this lib.
+You may want to check [do-space-client](https://github.com/oyyd/do-space-client) and
+[react-yue-app](https://github.com/viewstools/react-yue-app) as examples of using this lib.
 
 |mac|
 |---|

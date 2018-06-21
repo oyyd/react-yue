@@ -93,6 +93,10 @@ function insertBefore(parentInstance, child, beforeChild) {
   parentInstance.insertBefore(child, beforeChild)
 }
 
+function insertInContainerBefore(parentInstance, child, beforeChild) {
+  parentInstance.insertBefore(child, beforeChild)
+}
+
 // TODO: what's the "updatePayload"?
 function commitUpdate(instance, updatePayload, type, oldProps, newProps) {
   // console.log('instance, updatePayload', instance, updatePayload, type, oldProps, newProps)
@@ -138,16 +142,27 @@ export const YueRenderer = Reconciler({
 
   now,
 
-  mutation: {
-    appendChild,
-    appendChildToContainer,
-    removeChild,
-    removeChildFromContainer,
-    insertBefore,
-    commitUpdate,
-    commitMount,
-    commitTextUpdate,
-  },
+  supportsMutation: true,
+
+  appendChild,
+
+  appendChildToContainer,
+
+  commitMount,
+
+  commitUpdate,
+
+  insertBefore,
+
+  insertInContainerBefore,
+
+  removeChild,
+
+  removeChildFromContainer,
+
+  resetTextContent,
+
+  commitTextUpdate
 })
 
 function render(element, guiContainer, callback) {
