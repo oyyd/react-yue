@@ -61,10 +61,10 @@ function applyTextStyles (view, styles) {
 }
 
 module.exports = function applyStyles (view, styles = {}) {
+  view.setStyle(styles)
+  
   if (view instanceof gui.Label || view instanceof gui.Entry) {
     applyTextStyles(view, styles)
-  } else {
-    view.setStyle(styles)
   }
 
   if (styles.backgroundColor) {
