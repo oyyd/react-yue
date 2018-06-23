@@ -16,10 +16,11 @@
     "README.md"
   ],
   "peerDependencies": {
-    "gui": ">=0.4.4",
+    "gui": "^0.5.0",
     "react": "^16.2.0"
   },
   "dependencies": {
+    "parse-color": "^1.0.0",
     "react-reconciler": "^0.11.0"
   },
   "devDependencies": {
@@ -32,7 +33,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
-    "gui": "0.4.3",
+    "gui": "^0.5.0",
     "jest": "^22.0.3",
     "react": "^16.2.0"
   },

@@ -108,7 +108,16 @@ if (!process.versions.yode) {
 
 ## Style / Layout
 
-Yue use [yoga layout](https://libyue.com/docs/latest/js/guides/layout_system.html) and you can use these properties in the `style` property:
+Yue use [yoga layout](https://libyue.com/docs/latest/js/guides/layout_system.html) and you can use these properties in the `style` property. It's also possible to provide other styles via the `style` prop.
+
+ - `color`: hex|rgb|rgba|hsl|hsla|name of a color
+ - `backgroundColor`: hex|rgb|rgba|hsl|hsla| name of a color
+ - `fontSize`: number representing a pixel value
+ - `fontWeight`: supports 100-900 and all values in https://libyue.com/docs/latest/js/api/font_weight.html
+ - `fontFamily`: name of a font to use
+ - `fontStyle`: normal|italic
+ - `textAlign`: left|center|right
+ - `verticalAlign`: top|middle|bottom
 
 ```js
 import React from 'react'
@@ -119,6 +128,7 @@ export default function MyComp() {
       style={{
         flex: 1,
         flexDirection: 'row',
+        backgroundColor: 'black'
       }}
     >
       <container
@@ -126,7 +136,13 @@ export default function MyComp() {
           justifyContent: 'center',
         }}
       >
-        <label text="hello" />
+        <label 
+          text="hello"
+          style={{
+            color: 'white',
+            fontSize: 14
+          }}
+        />
       </container>
     </container>
   )
@@ -146,9 +162,6 @@ _props:_
 - `Boolean` enabled
 - `Boolean` focusable
 - `Boolean` mouseDownCanMoveWindow
-- `Font` font
-- `Color` color
-- `Color` backgroundColor
 
 _events:_
 
