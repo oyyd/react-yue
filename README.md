@@ -18,6 +18,8 @@ You may want to check [do-space-client](https://github.com/oyyd/do-space-client)
 
 ## Get Started
 
+**Use node v8 or v9 as they are supported by the builds of gui.**
+
 ```
 npm i react-yue react gui
 ```
@@ -136,7 +138,7 @@ export default function MyComp() {
           justifyContent: 'center',
         }}
       >
-        <label 
+        <label
           text="hello"
           style={{
             color: 'white',
