@@ -30,7 +30,7 @@ function warn(msg) {
   console.warn(msg)
 }
 
-function shoudUpdate(props, lastProps, propName) {
+function shouldUpdate(props, lastProps, propName) {
   if (!props || props[propName] === undefined) {
     return false
   }
@@ -49,6 +49,6 @@ module.exports = {
   now,
   scheduleDeferredCallback,
   warn,
-  shoudUpdate,
+  shouldUpdate,
   win32,
 }
