@@ -1,6 +1,6 @@
 const { ProgressBar } = require('gui')
 const Base = require('./base')
-const { shoudUpdate } = require('../utils')
+const { shouldUpdate } = require('../utils')
 
 module.exports = class Wrapper extends Base {
   constructor(props) {
@@ -12,11 +12,11 @@ module.exports = class Wrapper extends Base {
   update(lastProps, props) {
     super.update(lastProps, props)
 
-    if (shoudUpdate(props, lastProps, 'value')) {
+    if (shouldUpdate(props, lastProps, 'value')) {
       this._ele.setValue(props.value)
     }
 
-    if (shoudUpdate(props, lastProps, 'indeterminate')) {
+    if (shouldUpdate(props, lastProps, 'indeterminate')) {
       this._ele.setIndeterminate(props.indeterminate)
     }
 

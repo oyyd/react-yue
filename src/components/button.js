@@ -1,6 +1,6 @@
 const { Button } = require('gui')
 const Base = require('./base')
-const { shoudUpdate } = require('../utils')
+const { shouldUpdate } = require('../utils')
 
 // TODO: add button style and border
 module.exports = class Wrapper extends Base {
@@ -20,11 +20,11 @@ module.exports = class Wrapper extends Base {
   update(lastProps, props) {
     super.update(lastProps, props)
 
-    if (shoudUpdate(props, lastProps, 'title')) {
+    if (shouldUpdate(props, lastProps, 'title')) {
       this._ele.setTitle(props.title)
     }
 
-    if (shoudUpdate(props, lastProps, 'image')) {
+    if (shouldUpdate(props, lastProps, 'image')) {
       this._ele.setImage(props.image)
     }
 

@@ -1,6 +1,6 @@
 const { Label } = require('gui')
 const Base = require('./base')
-const { shoudUpdate } = require('../utils')
+const { shouldUpdate } = require('../utils')
 
 module.exports = class Wrapper extends Base {
   constructor(props) {
@@ -12,15 +12,15 @@ module.exports = class Wrapper extends Base {
   update(lastProps, props) {
     super.update(lastProps, props)
 
-    if (shoudUpdate(props, lastProps, 'text')) {
+    if (shouldUpdate(props, lastProps, 'text')) {
       this._ele.setText(props.text)
     }
 
-    if (shoudUpdate(props, lastProps, 'align')) {
+    if (shouldUpdate(props, lastProps, 'align')) {
       this._ele.setAlign(props.align)
     }
 
-    if (shoudUpdate(props, lastProps, 'vAlign')) {
+    if (shouldUpdate(props, lastProps, 'vAlign')) {
       this._ele.setVAlign(props.vAlign)
     }
   }

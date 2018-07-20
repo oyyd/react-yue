@@ -1,7 +1,7 @@
 const { Scroll } = require('gui')
 const Base = require('./base')
 const { warn } = require('./log')
-const { shoudUpdate, win32 } = require('../utils')
+const { shouldUpdate, win32 } = require('../utils')
 
 module.exports = class Wrapper extends Base {
   constructor(props) {
@@ -13,7 +13,7 @@ module.exports = class Wrapper extends Base {
   update(lastProps, props) {
     super.update(lastProps, props)
 
-    if (shoudUpdate(props, lastProps, 'contentSize')) {
+    if (shouldUpdate(props, lastProps, 'contentSize')) {
       this._ele.setContentSize(props.contentSize)
     }
 
@@ -22,7 +22,7 @@ module.exports = class Wrapper extends Base {
       this._ele.setScrollbarPolicy(props.hpolicy, props.vpolicy)
     }
 
-    if (!win32 && shoudUpdate(props, lastProps, 'overlayScrollbar')) {
+    if (!win32 && shouldUpdate(props, lastProps, 'overlayScrollbar')) {
       this._ele.setOverlayScrollbar(props.overlayScrollbar)
     }
   }
