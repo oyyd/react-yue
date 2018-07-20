@@ -1,6 +1,6 @@
 {
   "name": "react-yue",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "This is a lib to help you render the View of Yue in the react way.",
   "main": "lib/index.js",
   "scripts": {
