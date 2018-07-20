@@ -39,7 +39,7 @@ function shouldUpdate(props, lastProps, propName) {
     return true
   }
 
-  return props[propName] === lastProps[propName]
+  return props[propName] !== lastProps[propName]
 }
 
 module.exports = {
